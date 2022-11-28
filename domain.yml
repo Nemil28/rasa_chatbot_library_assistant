@@ -3,31 +3,61 @@ version: "3.0"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
+  - timings
+  - availability
+  - roomtiming
+  - roombook
+  - location
+  - books
+  - membership
+  - checkout
+  - payment
+  - limit
+  - opentoday
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
 
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_timings:
+  - text: "We're open every day 9am-9pm"
+
+  utter_availability:
+  - text: "Yes we do have study and presentation rooms available for booking."
+
+  utter_roomtiming:
+  - text: "The rooms are available from 9am to 9pm and the maximum time you can book it for is 2 hours."
+
+  utter_roombook:
+  - text: "You can book the room online or you can call the library at 1-800-MLK to make a booking."
+
+  utter_location:
+  - text: "The library is located at "
+
+  utter_books:
+  - text: ""
+
+  utter_membership:
+  - text: "The library can be used for free but you need to purchase a $1.99/month membership to borrow the books from the library."
+
+  utter_checkout:
+  - text: "Books may be checked out at the library circulation desk for a maximum of 25 days."
+
+  utter_payment:
+  - text: "Unfortunately we are only accepting cash at this moment and we are sorry for the inconvenience caused."
+
+  utter_limit:
+  - text: "You can checkout at most 3 books at a time."
+
+  utter_opentoday:
+  - text: "Yes we are open today."
 
 session_config:
   session_expiration_time: 60
