@@ -65,6 +65,23 @@ nlu:
     - What kind of books are there?
     - What books are offered?
 
+- intent: papers
+  examples: |
+    - What are the types of research papers you have?
+    - Do you have research papers?
+    - Which research papers do you have?
+    - What kind of research papers are there?
+    - What kind of research papers are offered?
+
+- intent: subject
+  examples: |
+    - chemistry
+    - Chemistry
+    - Physics
+    - physics
+    - AI
+    - ai
+
 - intent: membership
   examples: |
     - Do you charge any fees?

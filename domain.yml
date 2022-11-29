@@ -10,15 +10,21 @@ intents:
   - roombook
   - location
   - books
+  - papers
+  - subject
   - membership
   - checkout
   - payment
   - limit
   - opentoday
 
+actions:
+  - action_get_books
+  - action_get_papers
+
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hello! What can I help you with?"
 
   utter_goodbye:
   - text: "Bye"
@@ -42,7 +48,13 @@ responses:
   - text: "The library is located at "
 
   utter_books:
-  - text: ""
+  - text: "We have over 20,000 books and these are some of the genres present.. {books}"
+
+  utter_papers:
+  - text: "We have papers from the arxiv archive library. What subject would you like to search for?"
+
+  utter_subjects:
+  - text: "Here are some of the papers for the following subject.. {papers}"
 
   utter_membership:
   - text: "The library can be used for free but you need to purchase a $1.99/month membership to borrow the books from the library."
