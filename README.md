@@ -1,5 +1,5 @@
 # Lib Chat
-CMPE-252 (Final Project Chatbot suggesting tourist places nearby user)
+CMPE-252 (Final Project Chatbot)
 
 This chatbot is a conversational AI built using the open-source Rasa framework. Its purpose is to provide help as a Library Assistant.
 
@@ -30,32 +30,32 @@ There are times when people need access to library resources during after hours.
 
 1. Clone this repository
 
-git clone https://github.com/Nemil28/Rasa_Project.git
+`git clone https://github.com/Nemil28/Rasa_Project.git`
 
 
 2. Install the required dependencies
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 3. Train the chatbot's natural language processing model by running the following command
 
-rasa train
+`rasa train`
 
 
 4. Run the custom actions file which is used to run the APIs created for this particular chatbot
 
-rasa run actions
+`rasa run actions`
 
 
 5. Start the chatbot server by running the following command
 
-rasa run
+`rasa run`
 
 
 {To run the chatbot in shell run the following command}
 
-rasa shell
+`rasa shell`
 
 
 ## File Structure
@@ -67,7 +67,7 @@ rasa shell
 
 ## Dialogue Flow
 
-One example for the dialogue flow is shown below
+### One example for the dialogue flow is shown below
 
 Your input ->  Hello                                                                                       
 Hello! What can I help you with?
@@ -105,7 +105,7 @@ We have over 20,000 books in the collection. Do you want a list of departments a
 Your input ->  no                                                                                          
 Okay. Let me know if I can do something else.
 
-Another example of a dialogue flow is shown below.
+### Another example of a dialogue flow is shown below.
 
 Your input ->  Do you have reserach papers?                                                                
 We have papers from the arxiv archive library. What subject would you like to search for?
@@ -129,6 +129,6 @@ Your input ->  How do I make a payment for the book?
 Unfortunately we are only accepting cash at this moment and we are sorry for the inconvenience caused.
                                                                               
 
-For obtaining the graph for dialogue flow, the code is given below
+## For obtaining the graph for dialogue flow, the code is given below
 
-rasa visualize
+`rasa visualize`
