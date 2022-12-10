@@ -13,7 +13,9 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from papers import paper
 from books import book
+from database_connection import DataUpdate
 
+book1 = book()
 
 class ActionGetBooks(Action):
 
@@ -24,8 +26,8 @@ class ActionGetBooks(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        temp = book()
-        dispatcher.utter_template("utter_books", tracker, books = temp)
+#        temp = book1
+        dispatcher.utter_template("utter_agree", tracker, books = book1)
 
         return []
 
@@ -41,5 +43,19 @@ class ActionGetPapers(Action):
         subj = tracker.latest_message['text']
         temp2 = paper(subj)
         dispatcher.utter_template("utter_subjects", tracker, papers = temp2)
+
+        return []
+
+class ActionDatabase(Action):
+
+    def name(self) -> Text:
+        return "action_database"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        DataUpdate(book1)
+        #dispatcher.utter_template("utter_agree", tracker, books = temp)
 
         return []

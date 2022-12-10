@@ -11,3 +11,9 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Jump to papers
+  steps:
+  - intent: papers
+  - action: utter_papers
+

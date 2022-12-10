@@ -2,7 +2,35 @@ version: "3.0"
 
 stories:
 
-- story: find library
+- story: find paper books yes
+  steps:
+  - intent: papers
+  - action: utter_papers
+  - intent: subject
+  - action: action_get_papers
+  - intent: books
+  - action: utter_books
+  - intent: agree
+  - action: action_get_books
+  - intent: checkout
+  - action: utter_checkout
+  - intent: limit
+  - action: utter_limit
+  - intent: payment
+  - action: utter_payment
+
+- story: find paper books no
+  steps:
+  - intent: papers
+  - action: utter_papers
+  - intent: subject
+  - action: action_get_papers
+  - intent: books
+  - action: utter_books
+  - intent: disagree
+  - action: utter_disagree
+
+- story: find library no
   steps:
   - intent: greet
   - action: utter_greet
@@ -19,30 +47,39 @@ stories:
   - intent: membership
   - action: utter_membership
   - intent: payment
-  - action: utter_payment 
-
-- story: find paper
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: opentoday
-  - action: utter_opentoday
+  - action: utter_payment
   - intent: papers
   - action: utter_papers
   - intent: subject
   - action: action_get_papers
+  - intent: books
+  - action: utter_books
+  - intent: disagree
+  - action: utter_disagree
 
-- story: find book
+- story: find library yes
   steps:
   - intent: greet
   - action: utter_greet
   - intent: opentoday
   - action: utter_opentoday
-  - intent: books
-  - action: action_get_books
-  - intent: checkout
-  - action: utter_checkout
-  - intent: limit
-  - action: utter_limit
+  - intent: availability
+  - action: utter_availability
+  - intent: roomtiming
+  - action: utter_roomtiming
+  - intent: roombook
+  - action: utter_roombook
+  - intent: location
+  - action: utter_location
+  - intent: membership
+  - action: utter_membership
   - intent: payment
   - action: utter_payment
+  - intent: papers
+  - action: utter_papers
+  - intent: subject
+  - action: action_get_papers
+  - intent: books
+  - action: utter_books
+  - intent: agree
+  - action: action_get_books

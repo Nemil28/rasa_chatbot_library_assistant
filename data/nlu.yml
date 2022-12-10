@@ -65,6 +65,18 @@ nlu:
     - What kind of books are there?
     - What books are offered?
 
+- intent: agree
+  examples: |
+    - yes
+    - Yes
+    - y
+
+- intent: disagree
+  examples: |
+    - no
+    - No
+    - n
+
 - intent: papers
   examples: |
     - What are the types of research papers you have?

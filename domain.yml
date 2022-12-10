@@ -10,6 +10,8 @@ intents:
   - roombook
   - location
   - books
+  - agree
+  - disagree
   - papers
   - subject
   - membership
@@ -21,6 +23,25 @@ intents:
 actions:
   - action_get_books
   - action_get_papers
+  - action_database
+  - utter_greet
+  - utter goodbye
+  - utter_iamabot
+  - utter_timings
+  - utter_availability
+  - utter_roomtiming
+  - utter_roombook
+  - utter_location
+  - utter_books
+  - utter_agree
+  - utter_disagree
+  - utter_papers
+  - utter_subject
+  - utter_membership
+  - utter_checkout
+  - utter_payment
+  - utter_limit
+  - utter_opentoday
 
 responses:
   utter_greet:
@@ -45,10 +66,16 @@ responses:
   - text: "You can book the room online or you can call the library at 1-800-MLK to make a booking."
 
   utter_location:
-  - text: "The library is located at "
+  - text: "The library is located at 150 E San Fernando St, San Jose, CA, 95112"
 
   utter_books:
-  - text: "We have over 20,000 books and these are some of the genres present.. {books}"
+  - text: "We have over 20,000 books in the collection. Do you want a list of departments available?"
+
+  utter_agree:
+  - text: "Here is a list of some of the genres available.. {books}"
+
+  utter_disagree:
+  - text: "Okay. Let me know if I can do something else."
 
   utter_papers:
   - text: "We have papers from the arxiv archive library. What subject would you like to search for?"

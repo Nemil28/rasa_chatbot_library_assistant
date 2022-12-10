@@ -7,10 +7,12 @@ def book():
     #print(json_data)
 
     a = set([])
-    
+
     for i in range(20):
         a.add(json_data[i]["contactDepartment"])
-    
-    #print(a)
-    
-    return a
+
+    d = dict.fromkeys(a, 0)
+    #print(d)
+    #print(type(d))
+        
+    return d
