@@ -132,3 +132,7 @@ Unfortunately we are only accepting cash at this moment and we are sorry for the
 ## For obtaining the graph for dialogue flow, the code is given below
 
 `rasa visualize`
+
+### Graph Visualization for the Conversational flow of this project.
+
+![Graph](Graph.png)
