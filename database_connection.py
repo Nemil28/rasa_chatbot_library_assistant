@@ -4,8 +4,8 @@ from psycopg2 import Error
 def DataUpdate(bookresponse): 
     mydb = psycopg2.connect(
         host="localhost", 
-        user="postgres",  
-        passwd="root", 
+        user="...",  
+        passwd="...", 
         port="5432",
         database="rasa_chatbot"
     ) 
